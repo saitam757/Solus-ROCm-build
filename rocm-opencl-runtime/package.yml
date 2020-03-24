@@ -1,0 +1,37 @@
+name       : rocm-opencl-runtime
+version    : 3.1.0
+release    : 1
+source     :
+    -  https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime/archive/roc-3.1.0.tar.gz : c14f544daef32e991af4f356825d1e9cb99ddad4a58ba7dda6054603a9c5d1b8
+    - https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/6c03f8b58fafd9dd693eaac826749a5cfad515f8.tar.gz : c94d5bb6dc980c4d41d73e2b81663a19aabe494e923e2d0eec72a4c95b318438
+license    : MIT
+component  : programming.devel
+summary    :  OpenCL 2.0 compatible language runtime
+description: |
+     OpenCL 2.0 compatible language runtime
+patterns   :
+    - /*
+extract    : False
+builddeps  :
+    - rocm-cmake
+    - rocr-runtime-devel
+    - roct-thunk-interface-devel
+    - rocm-comgr-devel
+    - rocm-device-libs-devel
+    - llvm-roc
+    - ocl-icd-devel
+    - mesalib-devel
+setup      : |
+    tar -xvzf $sources/roc-3.1.0.tar.gz -C ./ --strip-components=1
+    mkdir api/opencl/khronos/icd
+    tar -xvzf $sources/6c03f8b58fafd9dd693eaac826749a5cfad515f8.tar.gz -C api/opencl/khronos/icd --strip-components=1
+    %patch -p1 < $pkgfiles/rocm-opencl-runtime-2.8.0-amdocl64icd.patch
+    %patch -p1 < $pkgfiles/rocm-opencl-runtime-2.8.0-change-opencl.patch
+    %patch -p1 < $pkgfiles/rocm-opencl-runtime-2.8.0-update-README.patch
+    %patch -p1 < $pkgfiles/rocm-opencl-runtime-3.0.0-change-install-location.patch
+    %patch -p1 < $pkgfiles/rocm-opencl-runtime-3.1.0-find-rocr.patch
+   %cmake_ninja -DUSE_COMGR_LIBRARY=yes -DLLVM_DIR="/usr/lib64/llvm/roc/" -DClang_DIR="/usr/lib64/llvm/roc/lib/cmake/clang/" ..
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

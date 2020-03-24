@@ -1,0 +1,14 @@
+diff -u a/cmake/modules/FindROCR.cmake b/cmake/modules/FindROCR.cmake
+--- a/cmake/modules/FindROCR.cmake	2020-02-25 19:29:40.000000000 +0100
++++ b/cmake/modules/FindROCR.cmake	2020-03-23 15:17:33.220968000 +0100
+@@ -4,7 +4,7 @@
+ #   - ROCR_FOUND     - ROCR status (found or not found)
+ #   - ROCR_INCLUDES  - Required ROCR include directories
+ #   - ROCR_LIBRARIES - Required ROCR libraries
+-find_path(FIND_ROCR_INCLUDES hsa.h HINTS /opt/rocm/include /opt/rocm/hsa/include PATH_SUFFIXES hsa)
+-find_library(FIND_ROCR_LIBRARIES hsa-runtime64 HINTS /opt/rocm/lib /opt/rocm/hsa/lib)
++find_path(FIND_ROCR_INCLUDES hsa.h HINTS /usr/include PATH_SUFFIXES hsa)
++find_library(FIND_ROCR_LIBRARIES hsa-runtime64 HINTS /usr/lib64/hsa)
+ 
+ include(FindPackageHandleStandardArgs)
+ find_package_handle_standard_args(ROCR DEFAULT_MSG

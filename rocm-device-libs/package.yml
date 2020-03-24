@@ -1,0 +1,19 @@
+name       : rocm-device-libs
+version    : 3.1.0
+release    : 1
+source     :
+    - https://github.com/RadeonOpenCompute/ROCm-Device-Libs/archive/roc-ocl-3.1.0.tar.gz : bce5da4adba4ea360cd4a8aff39d25d0d8a900bdd13aff0482b685bb495508f6
+license    : NCSA Open Source License
+component  : programming.devel
+summary    : AMD specific device-side language runtime libraries.
+description: |
+    AMD specific device-side language runtime libraries.
+builddeps  :
+    - rocr-runtime-devel
+    - llvm-roc
+setup      : |
+    %cmake_ninja -DLLVM_DIR="/usr/lib64/llvm/roc/" .
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

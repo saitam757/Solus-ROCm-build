@@ -1,0 +1,7 @@
+diff a/cmake/modules/FindROCR.cmake b/cmake/modules/FindROCR.cmake
+7,8c7,8
+< find_path(FIND_ROCR_INCLUDES hsa.h HINTS /opt/rocm/include /opt/rocm/hsa/include PATH_SUFFIXES hsa)
+< find_library(FIND_ROCR_LIBRARIES hsa-runtime64 HINTS /opt/rocm/lib /opt/rocm/hsa/lib)
+---
+> find_path(FIND_ROCR_INCLUDES hsa.h HINTS /usr/include PATH_SUFFIXES hsa)
+> find_library(FIND_ROCR_LIBRARIES hsa-runtime64 HINTS /usr/lib64)

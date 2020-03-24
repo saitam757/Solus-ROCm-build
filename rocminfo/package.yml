@@ -1,0 +1,18 @@
+name       : rocminfo
+version    : 3.1.0
+release    : 1
+source     :
+    - https://github.com/RadeonOpenCompute/rocminfo/archive/roc-3.1.0.tar.gz : f024fef05e5ea5bc7316d4bddb5562cbac7048183c351cdb8afd4156ff4c049c
+license    : Open Source License (NCSA)
+component  : programming.devel
+summary    : ROCm Application for Reporting System Info
+description: |
+    ROCm Application for Reporting System Info
+builddeps  :
+    - rocr-runtime-devel
+setup      : |
+    %cmake_ninja -DROCM_DIR="/usr" -DROCR_INC_DIR="/usr/include" -DROCR_LIB_DIR="/usr/lib64/hsa" .
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install

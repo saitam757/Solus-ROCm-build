@@ -1,0 +1,42 @@
+name       : rocr-runtime
+version    : 3.1.0
+release    : 1
+source     :
+    - https://github.com/RadeonOpenCompute/ROCR-Runtime/archive/roc-3.1.0.tar.gz : b162464ef87ce39518e59ef8406d6b897aa7a930795c586829614ed87aa1c2ce
+license    : NCSA
+component  : programming.devel
+summary    : This repository includes the user-mode API interfaces and libraries necessary for host applications to launch compute kernels to available HSA ROCm kernel agents.
+description: |
+    This repository includes the user-mode API interfaces and libraries necessary for host applications to launch compute kernels to available HSA ROCm kernel agents.
+builddeps  :
+    - pkgconfig(libelf)
+    - roct-thunk-interface-devel
+setup      : |
+    cd src
+    mkdir -p build
+    cd build
+    %cmake .. -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=. 
+build      : |
+    cd src/build
+    %make
+install    : |
+    cd src/build
+    install -D -m 00644 libhsa-runtime64.so $installdir%libdir%/hsa/libhsa-runtime64.so
+    install -D -m 00644 libhsa-runtime64.so.1 $installdir%libdir%/hsa/libhsa-runtime64.so.1
+    install -D -m 00644 libhsa-runtime64.so.1.1.9 $installdir%libdir%/hsa/libhsa-runtime64.so.1.1.9
+
+    cd ../inc
+    install -D -m 00644 amd_hsa_common.h $installdir/usr/include/hsa/amd_hsa_common.h
+    install -D -m 00644 amd_hsa_elf.h $installdir/usr/include/hsa/amd_hsa_elf.h
+    install -D -m 00644 amd_hsa_kernel_code.h $installdir/usr/include/hsa/amd_hsa_kernel_code.h
+    install -D -m 00644 amd_hsa_queue.h $installdir/usr/include/hsa/amd_hsa_queue.h
+    install -D -m 00644 amd_hsa_signal.h $installdir/usr/include/hsa/amd_hsa_signal.h
+    install -D -m 00644 Brig.h $installdir/usr/include/hsa/Brig.h
+    install -D -m 00644 hsa_api_trace.h $installdir/usr/include/hsa/hsa_api_trace.h
+    install -D -m 00644 hsa_ext_amd.h $installdir/usr/include/hsa/hsa_ext_amd.h
+    install -D -m 00644 hsa_ext_finalize.h $installdir/usr/include/hsa/hsa_ext_finalize.h
+    install -D -m 00644 hsa_ext_image.h $installdir/usr/include/hsa/hsa_ext_image.h
+    install -D -m 00644 hsa.h $installdir/usr/include/hsa/hsa.h
+    install -D -m 00644 hsa_ven_amd_aqlprofile.h $installdir/usr/include/hsa/hsa_ven_amd_aqlprofile.h
+    install -D -m 00644 hsa_ven_amd_loader.h $installdir/usr/include/hsa/hsa_ven_amd_loader.h
+    
