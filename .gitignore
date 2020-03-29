@@ -1,0 +1,4 @@
+*.eopkg
+abi_*
+pspec_x86_64.xml
+packager

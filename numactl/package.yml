@@ -16,3 +16,4 @@ build      : |
     %make
 install    : |
     %make_install
+    find $installdir -name "*.a" -type f -delete
