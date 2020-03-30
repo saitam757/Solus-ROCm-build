@@ -11,19 +11,19 @@ description: |
 builddeps  :
     - pkgconfig(libpci)
     - pkgconfig(numa)
+rundeps    :
+    - numactl
+    - pciutils
 setup      : |
     mkdir -p build/
     cd build
-    %cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=$installdir/usr ..
+    %cmake -DCMAKE_BUILD_TYPE=Release ..
 build      : |
     cd build
     %make
+    %make build-dev
 install    : |
    cd build
-   %cmake- -DCMAKE_INSTALL_PREFIX=$installdir/usr -P cmake_install.cmake
+   %make_install
+   %make DESTDIR=$installdir install-dev
 
-   
-   cd ../include
-   install -Dm00644 hsakmt.h $installdir/usr/include/hsakmt.h
-   install -Dm00644 hsakmttypes.h $installdir/usr/include/hsakmttypes.h
-    

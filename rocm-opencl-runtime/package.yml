@@ -21,6 +21,8 @@ builddeps  :
     - llvm-roc
     - ocl-icd-devel
     - mesalib-devel
+rundeps    :
+    
 setup      : |
     tar -xvzf $sources/roc-3.1.0.tar.gz -C ./ --strip-components=1
     mkdir api/opencl/khronos/icd
