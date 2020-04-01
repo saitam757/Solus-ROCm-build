@@ -4,7 +4,9 @@ release    : 1
 source     : 
     - https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface/archive/roc-3.1.0.tar.gz : b08176b5f4af39d0160990f9f1dea5d27974f9282f544140b4a41d19446fe570
 homepage   : https://github.com/RadeonOpenCompute/ROCT-Thunk-Interface
-license    : MIT
+license    : 
+    - BSD-2-Clause
+    - MIT
 component  : programming.devel
 summary    : Radeon Open Compute Thunk Interface 
 description: |
@@ -13,15 +15,13 @@ builddeps  :
     - pkgconfig(libpci)
     - pkgconfig(numa)
 setup      : |
-    mkdir -p build/
+    mkdir -p build
     cd build
     %cmake -DCMAKE_BUILD_TYPE=Release ..
 build      : |
     cd build
-    %make
     %make build-dev
 install    : |
     cd build
-    %make_install
-    %make DESTDIR=$installdir install-dev
-
+    %make_install install-dev
+    rm -rf $installdir/usr/share/doc
