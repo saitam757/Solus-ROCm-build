@@ -2,27 +2,28 @@ name       : rocm-opencl-runtime
 version    : 3.1.0
 release    : 1
 source     :
-    -  https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime/archive/roc-3.1.0.tar.gz : c14f544daef32e991af4f356825d1e9cb99ddad4a58ba7dda6054603a9c5d1b8
+    - https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime/archive/roc-3.1.0.tar.gz : c14f544daef32e991af4f356825d1e9cb99ddad4a58ba7dda6054603a9c5d1b8
     - https://github.com/KhronosGroup/OpenCL-ICD-Loader/archive/6c03f8b58fafd9dd693eaac826749a5cfad515f8.tar.gz : c94d5bb6dc980c4d41d73e2b81663a19aabe494e923e2d0eec72a4c95b318438
-license    : MIT
+homepage   : https://github.com/RadeonOpenCompute/ROCm-OpenCL-Runtime
+license    :
+    - Apache-2.0
+    - MIT
 component  : programming.devel
-summary    :  OpenCL 2.0 compatible language runtime
+summary    : OpenCL 2.0 compatible language runtime
 description: |
      OpenCL 2.0 compatible language runtime
 patterns   :
     - /*
 extract    : False
 builddeps  :
+    - pkgconfig(OpenCL)
+    - pkgconfig(gl)
+    - pkgconfig(libhsakmt)
     - rocm-cmake
     - rocr-runtime-devel
-    - roct-thunk-interface-devel
     - rocm-comgr-devel
     - rocm-device-libs-devel
     - llvm-roc
-    - ocl-icd-devel
-    - mesalib-devel
-rundeps    :
-    
 setup      : |
     tar -xvzf $sources/roc-3.1.0.tar.gz -C ./ --strip-components=1
     mkdir api/opencl/khronos/icd

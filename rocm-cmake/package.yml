@@ -5,7 +5,7 @@ source     :
     - https://github.com/RadeonOpenCompute/rocm-cmake/archive/roc-3.0.0.tar.gz : 9393fd534a100e8da55f44d0625337d76f3c7890e0297fe690c9e7d384b205ef
 license    : MIT
 component  : programming.devel
-summary    : ROCM cmake modules provides cmake modules for common build tasks needed for the ROCM software stack.
+summary    : Rocm cmake modules
 description: |
      ROCM cmake modules provides cmake modules for common build tasks needed for the ROCM software stack.
 setup      : |
@@ -17,12 +17,12 @@ build      : |
     cmake --build . --target install
 install    : |
     cd build/share/rocm/cmake/
-    install -D -m 00644 ROCMAnalyzers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMAnalyzers.cmake
-    install -D -m 00644 ROCMClangTidy.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMClangTidy.cmake
-    install -D -m 00644 ROCMConfig.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMConfig.cmake
-    install -D -m 00644 ROCMCppCheck.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCppCheck.cmake
-    install -D -m 00644 ROCMCreatePackage.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCreatePackage.cmake
-    install -D -m 00644 ROCMInstallSymlinks.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallSymlinks.cmake
-    install -D -m 00644 ROCMInstallTargets.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallTargets.cmake
-    install -D -m 00644 ROCMPackageConfigHelpers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMPackageConfigHelpers.cmake
-    install -D -m 00644 ROCMSetupVersion.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMSetupVersion.cmake
+    install -Dm00644 ROCMAnalyzers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMAnalyzers.cmake
+    install -Dm00644 ROCMClangTidy.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMClangTidy.cmake
+    install -Dm00644 ROCMConfig.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMConfig.cmake
+    install -Dm00644 ROCMCppCheck.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCppCheck.cmake
+    install -Dm00644 ROCMCreatePackage.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCreatePackage.cmake
+    install -Dm00644 ROCMInstallSymlinks.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallSymlinks.cmake
+    install -Dm00644 ROCMInstallTargets.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallTargets.cmake
+    install -Dm00644 ROCMPackageConfigHelpers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMPackageConfigHelpers.cmake
+    install -Dm00644 ROCMSetupVersion.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMSetupVersion.cmake
