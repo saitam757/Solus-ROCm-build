@@ -15,7 +15,7 @@ builddeps  :
     - pkgconfig(libpci)
     - pkgconfig(numa)
 setup      : |
-    mkdir -p build/
+    mkdir -p build
     cd build
     %cmake -DCMAKE_BUILD_TYPE=Release ..
 build      : |
@@ -24,5 +24,5 @@ build      : |
 install    : |
     cd build
     %make_install DESTDIR=$installdir install-dev
-    rm -rf $installdir//usr/share/doc
+    rm -rf $installdir/usr/share/doc
 
