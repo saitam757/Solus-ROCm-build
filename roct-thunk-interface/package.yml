@@ -23,6 +23,5 @@ build      : |
     %make build-dev
 install    : |
     cd build
-    %make_install DESTDIR=$installdir install-dev
+    %make_install install-dev
     rm -rf $installdir/usr/share/doc
-
