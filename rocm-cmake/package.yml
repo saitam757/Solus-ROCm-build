@@ -3,6 +3,7 @@ version    : 3.0.0
 release    : 1
 source     : 
     - https://github.com/RadeonOpenCompute/rocm-cmake/archive/roc-3.0.0.tar.gz : 9393fd534a100e8da55f44d0625337d76f3c7890e0297fe690c9e7d384b205ef
+homepage   : https://github.com/RadeonOpenCompute/rocm-cmake
 license    : MIT
 component  : programming.devel
 summary    : Rocm cmake modules

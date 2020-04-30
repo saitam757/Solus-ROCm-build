@@ -1,6 +1,7 @@
 0ad
 0ad-data
 The-Powder-Toy
+a2jmidid
 a2ps
 a52dec
 aa-lsm-hook
@@ -24,7 +25,6 @@ adapta-kde
 adms
 advancecomp
 adwaita-icon-theme
-aegisub
 aircrack-ng
 aisleriot
 akonadi
@@ -65,6 +65,7 @@ ant-gtk-theme
 ant-nebula-gtk-theme
 anthy
 antibody
+antimicrox
 antlr4-cpp-runtime
 aom
 apache-ant
@@ -119,6 +120,7 @@ aubio
 audacious
 audacious-plugins
 audacity
+audiofile
 audit
 autoconf
 autoconf-archive
@@ -142,6 +144,7 @@ baloo-widgets
 bam
 bamf
 baobab
+barrier
 base-certs
 baselayout
 bash
@@ -158,6 +161,7 @@ bfg-repo-cleaner
 biber
 biblesync
 bibtool
+binaryen
 bind-utils
 binutils
 birdtray
@@ -175,6 +179,7 @@ bluez
 bluez-qt
 bmon
 bolt
+bombermaaan
 bookworm
 boomaga
 boostnote
@@ -284,11 +289,11 @@ celestia
 celt
 celtic-magic-button
 cendric
-cerebro
 certbot
 cf-cli
 cfitsio
 cgal
+cgdb
 cgmanager
 chatty
 check
@@ -307,7 +312,6 @@ clazy
 cli-visualiser
 clinfo
 clipit
-clisp
 cln
 cloc
 cloud-print-connector
@@ -359,16 +363,19 @@ cppcheck
 cppcodec
 cpphs
 cppunit
+cppzmq
 cpu-x
 cpufrequtils
 cracklib
 crossguid
+crow-translate
 cryfs
 cryptomator
 cryptopp
 cryptsetup
 crystal
 ctags
+ctemplate
 ctpl
 cubicsdr
 cuetools
@@ -388,7 +395,6 @@ cyrus-sasl
 cython
 d-feet
 dar
-darkradiant
 darktable
 dash
 data-default-instances-containers
@@ -417,10 +423,10 @@ deja-dup
 dejagnu
 dejavu-fonts-ttf
 deluge
+delve
 dep
 desktop-file-utils
 desktopfolders
-desmume
 devedeng
 devhelp
 devilspie2
@@ -487,7 +493,6 @@ dsp
 dstat
 dub
 duckmarines
-dukto
 dunst
 duplicity
 dustrac
@@ -571,6 +576,11 @@ faudio
 fbreader
 fceux
 fcgi
+fcitx
+fcitx-configtool
+fcitx-hangul
+fcitx-libpinyin
+fcitx-qt5
 fd
 fdk-aac
 fdm-materials
@@ -892,6 +902,7 @@ granite
 grantlee
 grantleetheme
 graph-tool
+graphene
 graphicsmagick
 graphite2
 graphviz
@@ -1026,7 +1037,7 @@ haskell-case-insensitive
 haskell-cereal
 haskell-clock
 haskell-cmark
-haskell-cmark-cfm
+haskell-cmark-gfm
 haskell-cmdargs
 haskell-colour
 haskell-comonad
@@ -1197,6 +1208,7 @@ haskell-silently
 haskell-skylighting
 haskell-smallcheck
 haskell-socks
+haskell-sop-core
 haskell-split
 haskell-src
 haskell-src-exts
@@ -1384,6 +1396,7 @@ jasper
 java-service-wrapper
 jemalloc
 jitsi
+joe
 josm
 jp2a
 jpegoptim
@@ -1538,7 +1551,6 @@ kontalk
 konversation
 korganizer
 korla-icon-theme
-kotlin
 kotlin-native
 kpackage
 kparts
@@ -1551,6 +1563,7 @@ kplotting
 kpmcore
 kpty
 kquickcharts
+kraft
 krdc
 krename
 krita
@@ -1571,11 +1584,13 @@ ktextwidgets
 ktnef
 kubectl
 kunitconversion
+kuserfeedback
 kvantum
 kvirc
 kwallet
 kwallet-pam
 kwalletmanager
+kwave
 kwayland
 kwayland-integration
 kwidgetsaddons
@@ -1587,7 +1602,6 @@ kxmlrpcclient
 la-capitaine-icon-theme
 ladspa
 lame
-lander
 lash
 lastpass-cli
 latencytop
@@ -1851,6 +1865,7 @@ libnih
 libnitrokey
 libnl
 libnm-legacy
+libnma
 libnotify
 libnspr
 libnss
@@ -1888,6 +1903,7 @@ libplist
 libpng
 libpng12
 libpng15
+libportal
 libproxy
 libpsl
 libpth
@@ -1934,6 +1950,7 @@ libspatialite
 libspectre
 libspectrum
 libspeex
+libspiro
 libsrtp
 libssh
 libssh2
@@ -2203,15 +2220,18 @@ metis
 mgba
 micro
 microdns
-midori
 milkytracker
 miller
 milou
 mimic
 mindforger
 minetest
+mingw-w64-binutils
+mingw-w64-gcc
 minidlna
+minigalaxy
 minikube
+mininet
 miniupnpc
 minuet
 mit-scheme
@@ -2227,6 +2247,7 @@ moc
 modelio
 modem-manager
 modemmanager-qt
+mojave-gtk-theme
 moka-icon-theme
 mongo-tools
 mongodb
@@ -2243,7 +2264,6 @@ movit
 mozjs
 mozjs38
 mozo
-mp3diags
 mp3gain
 mpc
 mpc-client
@@ -2266,6 +2286,7 @@ multibootusb
 multipath-tools
 mumble
 muparser
+mupdf
 mupen64plus
 musescore
 musl
@@ -2362,10 +2383,10 @@ numix-icon-theme-circle
 numix-icon-theme-square
 numpy
 nv-codec-headers
-nvidia-340-glx-driver
 nvidia-390-glx-driver
 nvidia-beta-driver
 nvidia-container-runtime
+nvidia-container-toolkit
 nvidia-developer-driver
 nvidia-docker
 nvidia-glx-driver
@@ -2373,7 +2394,6 @@ nvme-cli
 nx-libs
 oath-toolkit
 obconf
-obmenu
 obs-studio
 ocaml
 ocamlbuild
@@ -2428,10 +2448,12 @@ opensp
 openspades
 openssh
 openssl
+opensubdiv
 opentoonz
 openttd
 opentyrian
 openvpn
+openvswitch
 openxcom
 opera-stable
 optipng
@@ -2453,7 +2475,6 @@ ovmf
 owncloud-client
 oxygen
 p7zip
-packagekit
 pacman
 palapeli
 pam
@@ -2465,8 +2486,6 @@ pandoc-citeproc
 pango
 pangomm
 pangox-compat
-pantheon-files
-pantheon-terminal
 paper-gtk-theme
 paper-icon-theme
 paperkey
@@ -3188,6 +3207,7 @@ python-pymongo
 python-pynacl
 python-pyocr
 python-pyotherside
+python-pypdf2
 python-pypeg2
 python-pyperclip
 python-pyproj
@@ -3207,6 +3227,7 @@ python-pytest
 python-pytest-cov
 python-pytest-flake8
 python-pytest-mock
+python-pytest-relaxed
 python-pytz
 python-pyusb
 python-pywavelets
@@ -3294,6 +3315,7 @@ python-txaio
 python-txtorcon
 python-typed-ast
 python-typing
+python-typing-extensions
 python-tzlocal
 python-unidecode
 python-uranium
@@ -3432,6 +3454,7 @@ radeon-profile
 radeon-profile-daemon
 radeontop
 radiotray-ng
+range-v3
 ranger
 rapid-photo-downloader
 rapidjson
@@ -3443,6 +3466,7 @@ raylib
 razer-drivers
 razergenie
 rclone
+rclone-browser
 rcm
 rdflib
 re2
@@ -3674,6 +3698,7 @@ soundtouch
 source-code-pro
 sox
 sparsehash
+spdlog
 spectacle
 speech-dispatcher
 speedcrunch
@@ -3719,6 +3744,7 @@ stunnel
 subliminal
 subsurface
 subsurface-libdc
+subtitlecomposer
 subversion
 sudo
 suil
@@ -3914,6 +3940,8 @@ viewnior
 vifm
 vigra
 vim
+vimix-cursors
+vimix-gtk-theme
 vinagre
 vino
 virglrenderer
@@ -3990,6 +4018,8 @@ wordgrinder
 workrave
 wpa_supplicant
 wpebackend-fdo
+wraith-master
+wsdd
 wxPython
 wxPython2
 wxmaxima
@@ -4043,6 +4073,7 @@ xinit
 xinput
 xiphos
 xkbcomp
+xkcdpass
 xkeyboard-config
 xkill
 xl2tpd
