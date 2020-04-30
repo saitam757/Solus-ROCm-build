@@ -9,20 +9,8 @@ summary    : Rocm cmake modules
 description: |
      ROCM cmake modules provides cmake modules for common build tasks needed for the ROCM software stack.
 setup      : |
-    mkdir -p build
-    cd build
-    %cmake -DCMAKE_INSTALL_PREFIX=. ..
+    %cmake_ninja .
 build      : |
-    cd build
-    cmake --build . --target install
+   %ninja_build
 install    : |
-    cd build/share/rocm/cmake/
-    install -Dm00644 ROCMAnalyzers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMAnalyzers.cmake
-    install -Dm00644 ROCMClangTidy.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMClangTidy.cmake
-    install -Dm00644 ROCMConfig.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMConfig.cmake
-    install -Dm00644 ROCMCppCheck.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCppCheck.cmake
-    install -Dm00644 ROCMCreatePackage.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMCreatePackage.cmake
-    install -Dm00644 ROCMInstallSymlinks.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallSymlinks.cmake
-    install -Dm00644 ROCMInstallTargets.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMInstallTargets.cmake
-    install -Dm00644 ROCMPackageConfigHelpers.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMPackageConfigHelpers.cmake
-    install -Dm00644 ROCMSetupVersion.cmake $installdir/usr/share/cmake-3.16/Modules/ROCMSetupVersion.cmake
+   %ninja_install

@@ -33,7 +33,7 @@ setup      : |
     %patch -p1 < $pkgfiles/rocm-opencl-runtime-2.8.0-update-README.patch
     %patch -p1 < $pkgfiles/rocm-opencl-runtime-3.0.0-change-install-location.patch
     %patch -p1 < $pkgfiles/rocm-opencl-runtime-3.1.0-find-rocr.patch
-    %cmake_ninja -DUSE_COMGR_LIBRARY=yes -DLLVM_DIR="/usr/lib64/llvm/roc/" -DClang_DIR="/usr/lib64/llvm/roc/lib/cmake/clang/" ..
+    %cmake_ninja -DUSE_COMGR_LIBRARY=yes -DLLVM_DIR="/usr/lib64/llvm/roc/" -DClang_DIR="/usr/lib64/llvm/roc/lib/cmake/clang/" -DCMAKE_INSTALL_SYSCONFDIR="/usr/share" ..
 build      : |
     %ninja_build
 install    : |
