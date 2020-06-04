@@ -12,6 +12,6 @@ description: |
 setup      : |
     %cmake_ninja .
 build      : |
-   %ninja_build
+    %ninja_build
 install    : |
-   %ninja_install
+    %ninja_install
