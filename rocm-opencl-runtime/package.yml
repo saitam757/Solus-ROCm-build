@@ -16,6 +16,7 @@ patterns   :
     - /*
 extract    : False
 builddeps  :
+    - libx11-devel
     - pkgconfig(OpenCL)
     - pkgconfig(gl)
     - pkgconfig(libhsakmt)
